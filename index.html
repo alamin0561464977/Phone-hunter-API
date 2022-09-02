@@ -24,11 +24,12 @@
 
 <body>
     <header>
-        <h1 class="text-center text-primary">Phone Hunter API</h1>
-        <div style="width: 380px; margin: 10px auto;" class="input-group mb-3">
+        <h1 class="text-center mt-5 text-primary">Phone Hunter API</h1>
+        <div style="width: 380px; margin: 30px auto;" class="input-group">
             <input id="searchFiled" type="text" class="form-control" placeholder="Recipient's username"
                 aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button onclick="searchBtn()" class="btn btn-outline-secondary" type="button">Search Phone</button>
+            <button onclick="searchBtn()" class="btn btn-outline-primary" type="button">Search
+                Phone</button>
         </div>
     </header>
     <main class="container">
@@ -38,11 +39,48 @@
 
             </div>
         </section>
+        <section>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phoneDetailsModal" class="modal-body">
+                            <section id="spinner2" class="d-flex justify-content-center mt-5 d-none">
+                                <button class="btn btn-primary" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                            </section>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="spinner" class="d-flex justify-content-center mt-5 d-none">
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </section>
+        <section id="showAllPhones" class="d-flex justify-content-center my-5 d-none">
+            <button id="spinnerBtn" type="button" class="btn btn-secondary">Show All Phones</button>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script src="utilitirs.js"></script>
     <script src="app.js"></script>
 </body>
 
